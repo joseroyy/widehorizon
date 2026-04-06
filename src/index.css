@@ -332,6 +332,7 @@ footer{padding:58px 52px 34px;border-top:1px solid rgba(255,255,255,.05);
 }
 .preloader-logo {
   width: 120px; height: 120px;
+  display: flex; align-items: center; justify-content: center;
   animation: logoPulse 1.5s ease-in-out infinite;
 }
 .preloader-bar {
