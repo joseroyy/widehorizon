@@ -309,7 +309,7 @@ footer{padding:58px 52px 34px;border-top:1px solid rgba(255,255,255,.05);
   .hero-acts{justify-content: center; width: 100%;}
   .eyebrow{justify-content: center;}
   #gc{display:none}
-  nav{padding:18px 24px}.nav-links{display:none}
+  nav{padding:18px 24px}
   .services,.why-sec,.dir-sec,.contact-sec{padding:70px 24px}
   .why-sec,.dir-sec,.cg,.ft{grid-template-columns:1fr}
   .globe-wrap{display:none}
