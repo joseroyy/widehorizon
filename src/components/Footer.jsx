@@ -36,7 +36,7 @@ const Footer = () => {
           <ul className="ft-ul" style={{ alignItems: 'center' }}>
             <li><a href="tel:+917902621955" style={{ fontSize: '1.3rem', fontWeight: '800', color: 'var(--wh)' }}>+91 79026 21955</a></li>
             <li><a href="mailto:widehorizon2025@gmail.com" style={{ fontSize: '1.1rem' }}>widehorizon2025@gmail.com</a></li>
-            <li><Link to="/contact" style={{ display: 'block', marginTop: '10px', fontSize: '1.05rem', color: 'rgba(255,255,255,0.5)' }}>13 KUZHIKADAVU, Near UC College, Aluva, KL 683102</Link></li>
+            <li><Link to="/contact" style={{ display: 'block', marginTop: '10px', fontSize: '1.05rem', color: 'rgba(255,255,255,0.5)' }}>Parambil Buildings, First floor, Uc college p.o, Aluva - 683102</Link></li>
           </ul>
         </div>
       </div>

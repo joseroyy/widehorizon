@@ -57,7 +57,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="ci-lbl" style={{ marginBottom: '6px' }}>Office Address</div>
-                  <div className="ci-v" style={{ fontSize: '1.2rem' }}>13 KUZHIKADAVU, Near Union Christian College<br/>Aluva, Karumalloor, Kerala 683102</div>
+                  <div className="ci-v" style={{ fontSize: '1.2rem' }}>Parambil Buildings, First floor<br/>Uc college p.o, Aluva<br/>Pincode 683102</div>
                 </div>
               </motion.div>
               
