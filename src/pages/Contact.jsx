@@ -61,7 +61,7 @@ const Contact = () => {
                 </div>
               </motion.div>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
                  <motion.div 
                    className="glass-card" 
                    style={{ padding: '24px', display: 'flex', gap: '20px', alignItems: 'flex-start' }}
@@ -98,7 +98,7 @@ const Contact = () => {
                    </div>
                    <div>
                      <div className="ci-lbl" style={{ marginBottom: '6px' }}>Email Address</div>
-                     <div className="ci-v"><a href="mailto:widehorizon2025@gmail.com" style={{ fontSize: '1.1rem' }}>widehorizon2025@gmail.com</a></div>
+                     <div className="ci-v"><a href="mailto:widehorizon2025@gmail.com" style={{ fontSize: '1.15rem', color: '#fff', textShadow: '0 0 15px rgba(255,255,255,0.2)', fontWeight: '500' }}>widehorizon2025@gmail.com</a></div>
                    </div>
                  </motion.div>
               </div>
