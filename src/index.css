@@ -310,13 +310,26 @@ footer{padding:58px 52px 34px;border-top:1px solid rgba(255,255,255,.05);
   .eyebrow{justify-content: center;}
   #gc{display:none}
   nav{padding:18px 24px}
-  .services,.why-sec,.dir-sec,.contact-sec{padding:70px 24px}
+  .services,.why-sec,.dir-sec,.contact-sec{padding:60px 20px}
   .why-sec,.dir-sec,.cg,.ft{grid-template-columns:1fr}
   .globe-wrap{display:none}
   .svc-header{flex-direction:column;align-items:flex-start;gap:18px}.svc-subdesc{text-align:left}
   .frow{grid-template-columns:1fr}
-  footer{padding:50px 24px 28px}
+  footer{padding:50px 20px 28px}
   .hstats{display: none;}
+  
+  /* Generic Responsive Utilities */
+  .res-grid-1-2 { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .res-grid-2 { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .res-grid-4 { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .res-padding { padding: 60px 20px !important; }
+  .res-title { font-size: 2.2rem !important; }
+  .res-br { display: none; }
+}
+
+@media(max-width:480px){
+  .res-grid-4 { grid-template-columns: 1fr !important; }
+  .res-grid-2 { grid-template-columns: 1fr !important; }
 }
 
 /* PRELOADER */

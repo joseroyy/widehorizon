@@ -61,7 +61,7 @@ const Contact = () => {
                 </div>
               </motion.div>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
                  <motion.div 
                    className="glass-card" 
                    style={{ padding: '24px', display: 'flex', gap: '20px', alignItems: 'flex-start' }}
@@ -182,14 +182,14 @@ const Contact = () => {
              </div>
              
              <motion.div 
-                style={{ 
-                   height: '450px', 
-                   width: '100%', 
-                   borderRadius: '16px', 
-                   overflow: 'hidden', 
-                   border: '1px solid rgba(255,255,255,0.05)',
-                   background: 'rgba(0,0,0,0.2)'
-                }}
+                 style={{ 
+                    height: 'clamp(300px, 50vh, 450px)', 
+                    width: '100%', 
+                    borderRadius: '16px', 
+                    overflow: 'hidden', 
+                    border: '1px solid rgba(255,255,255,0.05)',
+                    background: 'rgba(0,0,0,0.2)'
+                 }}
                 initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

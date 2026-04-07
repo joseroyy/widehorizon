@@ -108,7 +108,7 @@ const About = () => {
             We combine local expertise with global knowledge to deliver seamless services in abroad education, visa processing, documentation, and financial assistance.
           </p>
           <div className="why-pts" style={{ marginTop: '40px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            <div className="res-grid-1-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                <motion.div 
                   className="glass-card" 
                   style={{ padding: '24px' }}
@@ -143,6 +143,7 @@ const About = () => {
       </motion.section>
 
       <motion.section 
+         className="res-padding"
          style={{ padding: '100px 52px' }}
          initial={{ opacity: 0 }}
          whileInView={{ opacity: 1 }}
@@ -179,7 +180,7 @@ const About = () => {
       </motion.section>
 
       <motion.section 
-        className="dir-sec silk-bg" 
+        className="dir-sec silk-bg res-padding" 
         style={{ display: 'flex', flexDirection: 'column', padding: '120px 52px' }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -197,7 +198,7 @@ const About = () => {
              transition={{ duration: 0.7 }}
           >Beyond Boundaries, <em>Into Futures</em></motion.h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.8fr', gap: '80px', alignItems: 'start' }}>
+          <div className="res-grid-1-2" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.8fr', gap: '40px', alignItems: 'start' }}>
             
             {/* LEFT: Identity Card */}
             <motion.div 
@@ -217,7 +218,8 @@ const About = () => {
                   position: 'relative',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
+                  width: '100%'
                }}>
                   <div style={{ 
                      position: 'absolute', fontSize: '25rem', fontFamily: 'Syne', fontWeight: '900', 
@@ -226,11 +228,11 @@ const About = () => {
 
                   <div className="glass-card" style={{ 
                      padding: '50px 40px', backdropFilter: 'blur(40px)', background: 'rgba(10, 30, 50, 0.65)',
-                     border: '1px solid rgba(19,168,225,0.3)', borderRadius: '24px', width: '85%',
+                     border: '1px solid rgba(19,168,225,0.3)', borderRadius: '24px',
                      textAlign: 'center', position: 'relative', zIndex: 2
                   }}>
                      <div style={{ fontSize: '0.75rem', letterSpacing: '6px', textTransform: 'uppercase', color: 'var(--b)', marginBottom: '16px', fontWeight: '800' }}>Directorial Insight</div>
-                     <h3 style={{ fontFamily: 'Syne', fontSize: '3rem', fontWeight: '800', lineHeight: 1.0, marginBottom: '24px' }}>
+                     <h3 className="res-title" style={{ fontFamily: 'Syne', fontSize: '3rem', fontWeight: '800', lineHeight: 1.0, marginBottom: '24px' }}>
                         Vidya <br/><span style={{ color: 'var(--g)' }}>K P</span>
                      </h3>
                      <div style={{ width: '40px', height: '2px', background: 'var(--g)', margin: '0 auto 30px' }}></div>
@@ -270,7 +272,7 @@ const About = () => {
                   </p>
                </div>
 
-               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+               <div className="res-grid-1-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
                   <div className="glass-card" style={{ padding: '32px', borderLeft: '4px solid var(--g)' }}>
                      <h4 style={{ fontFamily: 'Syne', color: 'var(--g)', marginBottom: '16px', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '2px' }}>Philosophy</h4>
                      <p style={{ fontSize: '1.25rem', fontStyle: 'italic', fontWeight: '500', lineHeight: '1.6' }}>“We don’t just process applications — we build futures.”</p>
@@ -283,7 +285,7 @@ const About = () => {
 
                <div style={{ marginTop: '20px' }}>
                   <h3 style={{ fontFamily: 'Syne', fontSize: '1.4rem', marginBottom: '25px', letterSpacing: '-0.5px' }}>Directorial Excellence</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  <div className="res-grid-1-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                      {[
                        'Personalized Consultations',
                        'High Success Rate',
@@ -310,6 +312,7 @@ const About = () => {
 
           {/* Achievement Bar Footer */}
           <motion.div 
+             className="res-grid-2"
              style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '32px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '24px', padding: '50px 40px', marginTop: '80px' }}
              initial={{ opacity: 0, y: 40 }}
              whileInView={{ opacity: 1, y: 0 }}
