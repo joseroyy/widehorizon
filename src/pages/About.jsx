@@ -248,7 +248,7 @@ const About = () => {
                         {showPhone ? (
                           <>
                             <a href={`tel:${phoneNumber.replace(/\s/g, '')}`} style={{ color: 'var(--wh)', fontSize: '1.2rem', fontWeight: '800', textDecoration: 'none' }}>{phoneNumber}</a>
-                            <a href="mailto:widehorizon2025@gmail.com" style={{ color: 'var(--g)', fontSize: '1.2rem', textDecoration: 'none' }}>✉️</a>
+                            <a href="mailto:info@widehorizonoverseas.com" style={{ color: 'var(--g)', fontSize: '1.2rem', textDecoration: 'none' }}>✉️</a>
                           </>
                         ) : (
                           <button onClick={handlePhoneClick} style={{ background: 'var(--b)', color: '#fff', border: 'none', padding: '10px 22px', borderRadius: '4px', cursor: 'pointer', fontSize: '0.9rem', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '800' }}>Call / Show Number</button>
