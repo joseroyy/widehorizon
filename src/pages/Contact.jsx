@@ -94,7 +94,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="ci-lbl" style={{ marginBottom: '6px' }}>Office Address</div>
-                  <div className="ci-v" style={{ fontSize: '1.2rem' }}>Parambil Buildings, First floor<br/>Uc college p.o, Aluva<br/>Pincode 683102</div>
+                  <div className="ci-v" style={{ fontSize: '1.2rem' }}>Parambil Buildings, First floor<br/>UC College P.O, Aluva<br/>Pincode 683102</div>
                 </div>
               </motion.div>
               
@@ -135,7 +135,7 @@ const Contact = () => {
                    </div>
                    <div>
                      <div className="ci-lbl" style={{ marginBottom: '6px' }}>Email Address</div>
-                     <div className="ci-v"><a href="mailto:info@widehorizonoverseas.com" style={{ fontSize: '1.15rem', color: '#fff', textShadow: '0 0 15px rgba(255,255,255,0.2)', fontWeight: '500' }}>info@widehorizonoverseas.com</a></div>
+                     <div className="ci-v"><a href="mailto:info@widehorizonoverseas.com" style={{ fontSize: 'clamp(0.85rem, 3.8vw, 1.15rem)', color: '#fff', textShadow: '0 0 15px rgba(255,255,255,0.2)', fontWeight: '500', wordBreak: 'break-all', display: 'block' }}>info@widehorizonoverseas.com</a></div>
                    </div>
                  </motion.div>
               </div>

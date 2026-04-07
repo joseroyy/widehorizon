@@ -156,8 +156,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .dir-rows{display:flex;flex-direction:column;gap:14px}
 .dr{display:flex;align-items:center;gap:14px}
 .dr-ic{width:32px;height:32px;background:rgba(19,168,225,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
-.dr-v{font-size:1.13rem;color:rgba(255,255,255,.7);font-weight:300;line-height:1.5}
-.dr-v a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.dr-v{font-size:1.13rem;color:rgba(255,255,255,.7);font-weight:300;line-height:1.5;overflow-wrap:anywhere;word-break:break-word}
+.dr-v a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s;overflow-wrap:anywhere;word-break:break-word}
 .dr-v a:hover{color:var(--g)}
 .dir-txt .sec-title{margin-bottom:18px}
 .dir-txt p{font-size:1.13rem;line-height:1.9;color:rgba(255,255,255,.4);font-weight:300;margin-bottom:22px}
@@ -182,8 +182,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .ci{display:flex;gap:14px;align-items:flex-start}
 .ci-d{width:4px;height:4px;background:var(--g);border-radius:50%;margin-top:10px;flex-shrink:0}
 .ci-lbl{font-size:.81rem;letter-spacing:3px;text-transform:uppercase;color:var(--b);margin-bottom:5px}
-.ci-v{font-size:1.13rem;color:rgba(255,255,255,.65);line-height:1.6;font-weight:300}
-.ci-v a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}.ci-v a:hover{color:var(--g)}
+.ci-v{font-size:1.13rem;color:rgba(255,255,255,.65);line-height:1.6;font-weight:300;overflow-wrap:anywhere;word-break:break-word}
+.ci-v a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s;overflow-wrap:anywhere;word-break:break-word}.ci-v a:hover{color:var(--g)}
 .cform{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:42px;backdrop-filter:blur(10px)}
 .cform-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:30px;letter-spacing:-.3px}
 .cform-title span{color:var(--b)}
