@@ -16,14 +16,51 @@ const Contact = () => {
   const [btnText, setBtnText] = useState('Send Enquiry →');
   const [btnStyle, setBtnStyle] = useState({});
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setBtnText('Message Sent ✓');
-    setBtnStyle({ background: 'linear-gradient(135deg,#cdde3a,#a8ba10)' });
-    setTimeout(() => {
-      setBtnText('Send Enquiry →');
-      setBtnStyle({});
-    }, 3000);
+    setBtnText('Sending...');
+    
+    const formData = new FormData(e.target);
+    formData.append("access_key", "6ae3c01b-5995-4292-9b43-5eaa62baaf92");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        setBtnText('Message Sent ✓');
+        setBtnStyle({ background: 'linear-gradient(135deg,#cdde3a,#a8ba10)' });
+        e.target.reset();
+        setTimeout(() => {
+          setBtnText('Send Enquiry →');
+          setBtnStyle({});
+        }, 5000);
+      } else {
+        setBtnText('Error ✗');
+        setBtnStyle({ background: '#ff4444' });
+        setTimeout(() => {
+          setBtnText('Send Enquiry →');
+          setBtnStyle({});
+        }, 3000);
+      }
+    } catch (error) {
+      setBtnText('Error ✗');
+      setBtnStyle({ background: '#ff4444' });
+      setTimeout(() => {
+        setBtnText('Send Enquiry →');
+        setBtnStyle({});
+      }, 3000);
+    }
   };
 
   return (
@@ -116,13 +153,13 @@ const Contact = () => {
             <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.4)', marginBottom: '30px' }}>Tell us your requirement and we’ll get back to you quickly.</p>
             <form onSubmit={handleSubmit}>
               <div className="frow">
-                <div className="fg"><label>Full Name</label><input type="text" placeholder="Your name" required /></div>
-                <div className="fg"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX" required /></div>
+                <div className="fg"><label>Full Name</label><input type="text" name="name" placeholder="Your name" required /></div>
+                <div className="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div>
               </div>
-              <div className="fg"><label>Email Address</label><input type="email" placeholder="you@email.com" required /></div>
+              <div className="fg"><label>Email Address</label><input type="email" name="email" placeholder="you@email.com" required /></div>
               <div className="fg">
                 <label>Service Required</label>
-                <select required>
+                <select name="service" required>
                   <option value="">Select a service...</option>
                   <option value="Abroad Study">🎓 Abroad Study</option>
                   <option value="Visa Services">🛂 Visa Services</option>
@@ -135,7 +172,7 @@ const Contact = () => {
                   <option value="All India College Admission">🏫 All India College Admissions</option>
                 </select>
               </div>
-              <div className="fg"><label>Message</label><textarea placeholder="Tell us more about your requirements..." required></textarea></div>
+              <div className="fg"><label>Message</label><textarea name="message" placeholder="Tell us more about your requirements..." required></textarea></div>
               <button type="submit" className="sbtn" style={btnStyle}>
                 <span className="sbtn-txt" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
                   {btnText} {btnText.includes('Send') && <Send size={16} />}
