@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import GlobeCanvas from '../components/GlobeCanvas';
 import Beams from '../components/Beams';
 import TrustedBy from '../components/TrustedBy';
@@ -49,6 +50,11 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Wide Horizon | Home - Study & Work Abroad Consultancy</title>
+        <meta name="description" content="Welcome to Wide Horizon, Aluva's leading consultancy for study abroad, visas, and global documentation. Your bridge to international opportunities." />
+        <link rel="canonical" href="https://widehorizonoverseas.com/" />
+      </Helmet>
       <motion.section 
         className="hero" 
         style={{ position: 'relative', overflow: 'hidden' }}

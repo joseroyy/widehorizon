@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -65,6 +66,11 @@ const Contact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Wide Horizon | Get Your Free Consultation</title>
+        <meta name="description" content="Get in touch with Wide Horizon, Aluva's expert abroad consultancy. Visit us near UC College or send an enquiry for study, work, or visa services." />
+        <link rel="canonical" href="https://widehorizonoverseas.com/contact" />
+      </Helmet>
       <section className="contact-sec" id="contact" style={{ paddingTop: '160px' }}>
         <div className="cg">
           <motion.div 

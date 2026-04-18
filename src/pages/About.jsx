@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Target, Rocket, Globe, Zap, Users, Award, CheckCircle2 } from 'lucide-react';
 
 const AnimatedStat = ({ value, label, color }) => {
@@ -69,6 +70,11 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About Wide Horizon | Our Mission & Vision</title>
+        <meta name="description" content="Learn about Wide Horizon, Aluva's trusted global consultancy. Guided by Vidya K P, we help students and professionals navigate international education and visas." />
+        <link rel="canonical" href="https://widehorizonoverseas.com/about" />
+      </Helmet>
       <motion.section 
         className="why-sec mesh-bg" 
         id="why" 
@@ -81,7 +87,9 @@ const About = () => {
         <div className="globe-wrap">
           <div className="orb"><div className="orb-d"></div></div>
           <div className="orb2"><div className="orb-d2"></div></div>
-          <svg viewBox="0 0 400 400" fill="none">
+          <svg viewBox="0 0 400 400" fill="none" role="img" aria-labelledby="about-svg-title about-svg-desc">
+            <title id="about-svg-title">Wide Horizon Logo and Mission</title>
+            <desc id="about-svg-desc">Visual representation of Wide Horizon's global consultancy services with the company logo at the center.</desc>
             <defs>
               <radialGradient id="gg" cx="38%" cy="32%">
                 <stop offset="0%" stopColor="#1fc0f0" stopOpacity=".55" />
