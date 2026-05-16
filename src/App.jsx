@@ -8,6 +8,9 @@ import CtaSection from './components/CtaSection';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import StudyAbroad from './pages/StudyAbroad';
+import VisaServices from './pages/VisaServices';
+import CertificateAttestation from './pages/CertificateAttestation';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -80,6 +83,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/study-abroad" element={<StudyAbroad />} />
+          <Route path="/visa-services" element={<VisaServices />} />
+          <Route path="/certificate-attestation" element={<CertificateAttestation />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

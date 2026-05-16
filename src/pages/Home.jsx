@@ -247,7 +247,8 @@ const Home = () => {
               desc: 'Get admission into top universities across the globe with expert profiling, SOP guidance, and application support.',
               tags: ['Germany', 'UK', 'Canada', 'USA', 'Australia'],
               color: 'rgba(19, 168, 225, 0.15)',
-              img: '/services/Abroad Study.png'
+              img: '/services/Abroad Study.png',
+              link: '/study-abroad'
             },
             { 
               name: 'Visa Services', 
@@ -255,7 +256,8 @@ const Home = () => {
               desc: 'We simplify complex visa processes with expert documentation and high approval success.',
               tags: ['Student', 'Tourist', 'Business', 'Dependent'],
               color: 'rgba(205, 222, 58, 0.15)',
-              img: '/services/Visa Services.png'
+              img: '/services/Visa Services.png',
+              link: '/visa-services'
             },
             { 
               name: 'Certificate Attestation', 
@@ -263,7 +265,8 @@ const Home = () => {
               desc: 'Fast and reliable attestation services for all types of documents like HRD, MEA, Embassy.',
               tags: ['HRD', 'MEA', 'Apostille', 'Notary'],
               color: 'rgba(255, 255, 255, 0.05)',
-              img: '/services/Certificate Attestation.png'
+              img: '/services/Certificate Attestation.png',
+              link: '/certificate-attestation'
             },
             { 
               name: 'Flight Ticketing', 
@@ -313,49 +316,55 @@ const Home = () => {
               color: 'rgba(255, 255, 255, 0.08)',
               img: '/services/Stamp & Seal Making.png'
             }
-          ].map((s, i) => (
-            <motion.div 
-               key={i} 
-               className="group" 
-               style={{ 
-                 padding: '0', 
-                 overflow: 'hidden', 
-                 display: 'flex', 
-                 flexDirection: 'column', 
-                 height: '100%',
-                 background: '#59d102',
-                 borderRadius: '16px',
-                 border: '1px solid rgba(255,255,255,0.1)'
-               }}
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true, margin: "-50px" }}
-               transition={{ delay: (i % 3) * 0.15, duration: 0.6 }}
-            >
-              <div style={{ width: '100%', height: '220px', position: 'relative', overflow: 'hidden' }}>
-                <img 
-                  src={s.img} 
-                  alt={s.name} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)' }} 
-                  className="card-img-scale"
-                />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 30%, rgba(7, 21, 37, 0.9))' }}></div>
-              </div>
-              <div style={{ padding: '32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
-                  <div>
-                    {React.cloneElement(s.icon, { color: '#000', size: 32 })}
+          ].map((s, i) => {
+            const cardContent = (
+              <motion.div 
+                 key={i} 
+                 className="group" 
+                 style={{ 
+                   padding: '0', 
+                   overflow: 'hidden', 
+                   display: 'flex', 
+                   flexDirection: 'column', 
+                   height: '100%',
+                   background: '#59d102',
+                   borderRadius: '16px',
+                   border: '1px solid rgba(255,255,255,0.1)'
+                 }}
+                 initial={{ opacity: 0, y: 30 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true, margin: "-50px" }}
+                 transition={{ delay: (i % 3) * 0.15, duration: 0.6 }}
+              >
+                <div style={{ width: '100%', height: '220px', position: 'relative', overflow: 'hidden' }}>
+                  <img 
+                    src={s.img} 
+                    alt={s.name} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)' }} 
+                    className="card-img-scale"
+                  />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 30%, rgba(7, 21, 37, 0.9))' }}></div>
+                </div>
+                <div style={{ padding: '32px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
+                    <div>
+                      {React.cloneElement(s.icon, { color: '#000', size: 32 })}
+                    </div>
+                    <div style={{ fontSize: '1.17rem', fontWeight: '800', fontFamily: 'Syne', color: 'rgba(0,0,0,0.1)', letterSpacing: '2px' }}>0{i+1}</div>
                   </div>
-                  <div style={{ fontSize: '1.17rem', fontWeight: '800', fontFamily: 'Syne', color: 'rgba(0,0,0,0.1)', letterSpacing: '2px' }}>0{i+1}</div>
+                  <h3 style={{ fontFamily: 'Syne', fontSize: '1.45rem', fontWeight: '800', marginBottom: '14px', letterSpacing: '-0.3px', color: '#000' }}>{s.name}</h3>
+                  <p style={{ color: 'rgba(0,0,0,0.6)', lineHeight: '1.75', marginBottom: '28px', fontSize: '1.17rem', flex: 1, fontWeight: '500' }}>{s.desc}</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '20px', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                      {s.tags.map(t => <span key={t} className="stag" style={{ border: 'none', background: 'rgba(0,0,0,0.05)', fontSize: '0.9rem', padding: '5px 12px', color: 'rgba(0,0,0,0.5)' }}>{t}</span>)}
+                    </div>
+                    {s.link && <span style={{ color: '#000', fontWeight: '800', fontSize: '0.9rem', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '4px' }}>Learn More <ChevronRight size={16} /></span>}
+                  </div>
                 </div>
-                <h3 style={{ fontFamily: 'Syne', fontSize: '1.45rem', fontWeight: '800', marginBottom: '14px', letterSpacing: '-0.3px', color: '#000' }}>{s.name}</h3>
-                <p style={{ color: 'rgba(0,0,0,0.6)', lineHeight: '1.75', marginBottom: '28px', fontSize: '1.17rem', flex: 1, fontWeight: '500' }}>{s.desc}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '20px' }}>
-                  {s.tags.map(t => <span key={t} className="stag" style={{ border: 'none', background: 'rgba(0,0,0,0.05)', fontSize: '0.9rem', padding: '5px 12px', color: 'rgba(0,0,0,0.5)' }}>{t}</span>)}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+            return s.link ? <Link to={s.link} style={{ textDecoration: 'none' }} key={i}>{cardContent}</Link> : <div key={i}>{cardContent}</div>;
+          })}
         </div>
       </section>
       
