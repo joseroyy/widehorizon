@@ -13,21 +13,61 @@ const StudyAbroad = () => {
         <link rel="canonical" href="https://www.widehorizonoverseas.com/study-abroad" />
         <script type="application/ld+json">
           {`
-            {
-              "@context": "https://schema.org/",
-              "@type": "Service",
-              "serviceType": "Study Abroad Consulting",
-              "provider": {
-                "@type": "EducationalOrganization",
-                "name": "Wide Horizon Overseas",
-                "url": "https://www.widehorizonoverseas.com/"
+            [
+              {
+                "@context": "https://schema.org/",
+                "@type": "Service",
+                "serviceType": "Study Abroad Consulting",
+                "provider": {
+                  "@type": "EducationalOrganization",
+                  "name": "Wide Horizon Overseas",
+                  "url": "https://www.widehorizonoverseas.com/"
+                },
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Aluva"
+                },
+                "description": "Expert study abroad consulting services for students in Kerala. Admissions guidance for UK, USA, Canada, Germany, and Australia."
               },
-              "areaServed": {
-                "@type": "City",
-                "name": "Aluva"
-              },
-              "description": "Expert study abroad consulting services for students in Kerala. Admissions guidance for UK, USA, Canada, Germany, and Australia."
-            }
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Do you provide counseling for Germany?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, we provide end-to-end assistance for studying in Germany, including university selection, blocked account setup, and visa processing from our Aluva office."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can you help with education loans?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely. We assist students from Kerala in securing education loans with minimal documentation through our partnered financial institutions."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do I need IELTS to study abroad?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "While IELTS is required for many countries like the UK and Canada, some universities in the UK and Europe offer waivers based on your 12th-grade English scores. We can guide you based on your profile."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How long does the admission process take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The admission process typically takes 2-4 weeks after submitting all documents. We recommend starting the process at least 6 months before the intake."
+                    }
+                  }
+                ]
+              }
+            ]
           `}
         </script>
       </Helmet>

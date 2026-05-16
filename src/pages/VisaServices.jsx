@@ -13,21 +13,53 @@ const VisaServices = () => {
         <link rel="canonical" href="https://www.widehorizonoverseas.com/visa-services" />
         <script type="application/ld+json">
           {`
-            {
-              "@context": "https://schema.org/",
-              "@type": "Service",
-              "serviceType": "Visa Consulting Services",
-              "provider": {
-                "@type": "LocalBusiness",
-                "name": "Wide Horizon Overseas",
-                "url": "https://www.widehorizonoverseas.com/"
+            [
+              {
+                "@context": "https://schema.org/",
+                "@type": "Service",
+                "serviceType": "Visa Consulting Services",
+                "provider": {
+                  "@type": "EducationalOrganization",
+                  "name": "Wide Horizon Overseas",
+                  "url": "https://www.widehorizonoverseas.com/"
+                },
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Aluva"
+                },
+                "description": "Expert visa consultants in Kerala. Fast and reliable assistance for Student, Tourist, Work, and Dependent visas."
               },
-              "areaServed": {
-                "@type": "City",
-                "name": "Aluva"
-              },
-              "description": "Expert visa assistance for students, tourists, and professionals. High approval rates for UK, USA, Canada, and Schengen visas."
-            }
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is the success rate for student visas?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Wide Horizon Overseas has an industry-leading 98% student visa success rate due to our rigorous documentation and interview preparation process."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you provide assistance for dependent visas?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, we specialize in dependent visas for spouses and children of students and workers in the UK, Canada, and Australia."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How long does a UK tourist visa take from Kerala?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The standard processing time for a UK tourist visa is 3 weeks. However, priority and super-priority services are available at VFS centers in Kerala for faster decisions."
+                    }
+                  }
+                ]
+              }
+            ]
           `}
         </script>
       </Helmet>
