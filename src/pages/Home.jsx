@@ -329,19 +329,15 @@ const Home = () => {
             transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
           >
             {[
-              { n: 'Arjun P.', s: 'Germany MS', d: 'Secure admission & visa for Masters in Automotive Engineering at TU Munich.' },
-              { n: 'Meera Nair', s: 'UK Professional', d: 'Successful HCPC registration and Tier-2 visa for Nursing in London.' },
-              { n: 'Rahul K.S.', s: 'Canada PR', d: 'Express Entry processing with complete documentation & PR approval.' },
-              { n: 'Sneha Jose', s: 'Australia MBA', d: 'GTE clearance and 50% scholarship for MBA at UWA, Perth.' },
-              { n: 'Faisal R.', s: 'U.A.E Business', d: 'Commercial establishment setup and multiple investor visa processing.' },
-              { n: 'Anjali G.', s: 'Italy Visa', d: 'Hassle-free tourist visa processing for a 15-day solo trip across Milan & Rome.' },
-              { n: 'Kevin M.', s: 'USA Bachelors', d: 'Full-cycle support for undergrad admission and F1 visa at NYU.' },
-              { n: 'Karthik V.', s: 'Certificate Support', d: 'Authentication and Embassy attestation for 4 educational certificates.' },
+              { n: 'Anu Jithin', s: 'Visa Services', d: 'I had a great experience with Wide Horizon. Their team was professional, knowledgeable, and highly supportive throughout the entire process. They provided clear guidance on documentation and requirements, making everything much less stressful.' },
+              { n: 'Anjaly Vijayan', s: 'Visa Services', d: 'Great experience with Wide Horizon! Very professional team, friendly support, and fast service. Highly recommended.' },
+              { n: 'Anupam Sankar', s: 'Abroad Study', d: 'Wide Horizon has been really helpful in helping me get the admission and was always quick in helping out with all the queries I had.' },
+              { n: 'Aromal P', s: 'Abroad Study', d: 'Really good and efficient service. Highly satisfied with the overall experience.' },
+              { n: 'Nitha P S', s: 'Abroad Study', d: 'Good experience and very helpful staff. Guided me well through the process.' },
               // Duplicating for seamless loop
-              { n: 'Arjun P.', s: 'Germany MS', d: 'Secure admission & visa for Masters in Automotive Engineering at TU Munich.' },
-              { n: 'Meera Nair', s: 'UK Professional', d: 'Successful HCPC registration and Tier-2 visa for Nursing in London.' },
-              { n: 'Rahul K.S.', s: 'Canada PR', d: 'Express Entry processing with complete documentation & PR approval.' },
-              { n: 'Sneha Jose', s: 'Australia MBA', d: 'GTE clearance and 50% scholarship for MBA at UWA, Perth.' }
+              { n: 'Anu Jithin', s: 'Visa Services', d: 'I had a great experience with Wide Horizon. Their team was professional, knowledgeable, and highly supportive throughout the entire process.' },
+              { n: 'Anjaly Vijayan', s: 'Visa Services', d: 'Great experience with Wide Horizon! Very professional team, friendly support, and fast service.' },
+              { n: 'Anupam Sankar', s: 'Abroad Study', d: 'Wide Horizon has been really helpful in helping me get the admission and was always quick in helping out with all the queries I had.' }
             ].map((exp, i) => (
               <div key={i} className="glass-card" style={{ 
                 minWidth: '420px', 
@@ -355,13 +351,53 @@ const Home = () => {
                     {[...Array(5)].map((_, j) => <Star key={j} size={10} fill="var(--wh)" stroke="none" />)}
                   </div>
                 </div>
-                <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', fontSize: '1.25rem', marginBottom: '25px', height: '80px' }}>
+                <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', fontSize: '1.2rem', marginBottom: '25px', minHeight: '100px' }}>
                   {exp.d}
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{ width: '30px', height: '2px', background: 'var(--b)' }}></div>
                   <span style={{ fontFamily: 'Syne', fontWeight: '800', fontStyle: 'italic', fontSize: '1.15rem' }}>{exp.n}</span>
                 </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* POSTERS CAROUSEL */}
+        <div style={{ position: 'relative', width: '100vw', marginTop: '60px' }}>
+          <motion.div 
+            style={{ display: 'flex', gap: '20px', padding: '0 20px' }}
+            animate={{ x: [-1200, 0] }}
+            transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+          >
+            {[
+              'ANNA JIMMY.jpeg',
+              'ANUPAM.jpeg',
+              'AROMAL PUTHOORAM.jpeg',
+              'MERLIN LAWRENCE.jpeg',
+              'RINCHU GIREESH.jpeg',
+              'RIO ROY.jpeg',
+              'SHERIN K MARTIN.jpeg',
+              // Duplicating for seamless loop
+              'ANNA JIMMY.jpeg',
+              'ANUPAM.jpeg',
+              'AROMAL PUTHOORAM.jpeg',
+              'MERLIN LAWRENCE.jpeg',
+              'RINCHU GIREESH.jpeg'
+            ].map((img, i) => (
+              <div key={i} style={{ 
+                minWidth: '300px', 
+                height: '420px',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                border: '1px solid rgba(255,255,255,0.1)',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
+              }}>
+                <img 
+                  src={`/posters/${img}`} 
+                  alt="Success Poster" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
             ))}
           </motion.div>
