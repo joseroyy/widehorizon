@@ -71,9 +71,9 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Wide Horizon | Our Mission & Vision</title>
-        <meta name="description" content="Learn about Wide Horizon, Aluva's trusted global consultancy. Guided by Vidya K P, we help students and professionals navigate international education and visas." />
-        <link rel="canonical" href="https://widehorizonoverseas.com/about" />
+        <title>About Wide Horizon Overseas | Study Abroad Consultants in Aluva</title>
+        <meta name="description" content="Learn about Wide Horizon Overseas, Aluva's trusted global consultancy. Guided by Vidya K P, we help students navigate international education and visas." />
+        <link rel="canonical" href="https://www.widehorizonoverseas.com/about" />
       </Helmet>
       <motion.section 
         className="why-sec mesh-bg" 

@@ -67,9 +67,48 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Wide Horizon | Get Your Free Consultation</title>
-        <meta name="description" content="Get in touch with Wide Horizon, Aluva's expert abroad consultancy. Visit us near UC College or send an enquiry for study, work, or visa services." />
-        <link rel="canonical" href="https://widehorizonoverseas.com/contact" />
+        <title>Contact Wide Horizon | Study Abroad & Visa Consultants in Aluva</title>
+        <meta name="description" content="Contact Wide Horizon in Aluva for expert study abroad counseling, visa assistance, and certificate attestation. Get your free consultation today." />
+        <link rel="canonical" href="https://www.widehorizonoverseas.com/contact" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "name": "Wide Horizon Overseas",
+              "image": "https://www.widehorizonoverseas.com/logo.png",
+              "@id": "https://www.widehorizonoverseas.com/contact",
+              "url": "https://www.widehorizonoverseas.com/contact",
+              "telephone": "+917902621955",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Parambil Buildings, First floor, UC College P.O",
+                "addressLocality": "Aluva",
+                "addressRegion": "Kerala",
+                "postalCode": "683102",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "10.1260",
+                "longitude": "76.3262"
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <section className="contact-sec" id="contact" style={{ paddingTop: '160px' }}>
         <div className="cg">

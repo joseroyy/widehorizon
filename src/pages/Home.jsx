@@ -51,9 +51,53 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Wide Horizon | Home - Study & Work Abroad Consultancy</title>
-        <meta name="description" content="Welcome to Wide Horizon, Aluva's leading consultancy for study abroad, visas, and global documentation. Your bridge to international opportunities." />
-        <link rel="canonical" href="https://widehorizonoverseas.com/" />
+        <title>Study Abroad & Visa Consultants in Aluva | Wide Horizon</title>
+        <meta name="description" content="Wide Horizon is Aluva's trusted consultancy for study abroad, visas, certificate attestation, and flight tickets. Start your global journey with expert guidance today." />
+        <link rel="canonical" href="https://www.widehorizonoverseas.com/" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "name": "Wide Horizon Overseas",
+              "image": "https://www.widehorizonoverseas.com/logo.png",
+              "@id": "https://www.widehorizonoverseas.com/",
+              "url": "https://www.widehorizonoverseas.com/",
+              "telephone": "+917902621955",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Aluva",
+                "addressLocality": "Aluva",
+                "addressRegion": "Kerala",
+                "postalCode": "683101",
+                "addressCountry": "IN"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "10.1004",
+                "longitude": "76.3570"
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "09:30",
+                "closes": "18:00"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "835"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <motion.section 
         className="hero" 
