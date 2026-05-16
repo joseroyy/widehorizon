@@ -274,7 +274,8 @@ const Home = () => {
               desc: 'Best price deals for domestic and international travel with flexible booking options.',
               tags: ['International', 'Domestic', 'Travel Planning'],
               color: 'rgba(19, 168, 225, 0.12)',
-              img: '/services/Flight Ticketing.png'
+              img: '/services/Flight Ticketing.png',
+              link: '/flight-ticketing'
             },
             { 
               name: 'Insurance Services', 
@@ -282,7 +283,8 @@ const Home = () => {
               desc: 'Protect your journey with complete insurance coverage for travel, health, and more.',
               tags: ['Travel', 'Health', 'Student'],
               color: 'rgba(205, 222, 58, 0.12)',
-              img: '/services/Insurance Services.png'
+              img: '/services/Insurance Services.png',
+              link: '/insurance-services'
             },
             { 
               name: 'Loans & Support', 
@@ -290,7 +292,8 @@ const Home = () => {
               desc: 'Get financial assistance for education or personal needs with minimal hassle.',
               tags: ['Education', 'Personal', 'Business'],
               color: 'rgba(255, 255, 255, 0.08)',
-              img: '/services/Loans & Support.png'
+              img: '/services/Loans & Support.png',
+              link: '/education-loans'
             },
             { 
               name: 'PCC (Police Clearance)', 
@@ -298,7 +301,8 @@ const Home = () => {
               desc: 'Quick processing for all countries with proper documentation.',
               tags: ['Verification', 'Global', 'Documentation'],
               color: 'rgba(19, 168, 225, 0.15)',
-              img: '/services/PCC (Police Clearance).png'
+              img: '/services/PCC (Police Clearance).png',
+              link: '/pcc-police-clearance'
             },
             { 
               name: 'All India Admissions', 
@@ -306,7 +310,8 @@ const Home = () => {
               desc: 'Secure your future with expert guidance across Indian colleges.',
               tags: ['Medical', 'Engineering', 'Arts', 'Science'],
               color: 'rgba(205, 222, 58, 0.15)',
-              img: '/services/All India Admissions.png'
+              img: '/services/All India Admissions.png',
+              link: '/all-india-admissions'
             },
             { 
               name: 'Stamp & Seal Making', 
@@ -314,7 +319,8 @@ const Home = () => {
               desc: 'Custom-designed official stamps and seals for businesses.',
               tags: ['Official', 'Custom', 'Commercial'],
               color: 'rgba(255, 255, 255, 0.08)',
-              img: '/services/Stamp & Seal Making.png'
+              img: '/services/Stamp & Seal Making.png',
+              link: '/stamp-seal-making'
             }
           ].map((s, i) => {
             const cardContent = (

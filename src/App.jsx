@@ -11,6 +11,12 @@ import Contact from './pages/Contact';
 import StudyAbroad from './pages/StudyAbroad';
 import VisaServices from './pages/VisaServices';
 import CertificateAttestation from './pages/CertificateAttestation';
+import FlightTicketing from './pages/FlightTicketing';
+import InsuranceServices from './pages/InsuranceServices';
+import EducationLoans from './pages/EducationLoans';
+import PoliceClearance from './pages/PoliceClearance';
+import IndiaAdmissions from './pages/IndiaAdmissions';
+import StampMaking from './pages/StampMaking';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -86,6 +92,12 @@ function App() {
           <Route path="/study-abroad" element={<StudyAbroad />} />
           <Route path="/visa-services" element={<VisaServices />} />
           <Route path="/certificate-attestation" element={<CertificateAttestation />} />
+          <Route path="/flight-ticketing" element={<FlightTicketing />} />
+          <Route path="/insurance-services" element={<InsuranceServices />} />
+          <Route path="/education-loans" element={<EducationLoans />} />
+          <Route path="/pcc-police-clearance" element={<PoliceClearance />} />
+          <Route path="/all-india-admissions" element={<IndiaAdmissions />} />
+          <Route path="/stamp-seal-making" element={<StampMaking />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
